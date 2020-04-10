@@ -1,34 +1,29 @@
-:root{
-    --startColor: #3a7bd5;
-    --endColor: #3a6073;
-}
 
 body {
-    background: var(--startColor);  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, var(--startColor), var(--endColor));
-    background: linear-gradient(to right, var(--startColor), var(--endColor)); 
-    background-size: 400% 400%;
-    animation: gradient 5s ease infinite;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    font-family: Impact, Charcoal, sans-serif;
+}
+
+h1 {
+    font-size: 6rem;
+    letter-spacing: 1rem;
+    background: -webkit-radial-gradient(circle, #FF0000, #FFF200, #1E9600);  /* Chrome 10-25, Safari 5.1-6 */
+    background: radial-gradient(circle, #FF0000, #FFF200, #1E9600); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 200%;
+    animation: gradient 5s linear infinite alternate;
 }
 
 @keyframes gradient {
     0% {
         background-position: 0%;
     }
-    50% {
+    100% {
         background-position: 100%;
     }
-    100% {
-        background-position: 0%;
-    }
-}
-
-h1 {
-    font-size: 4rem;
-    letter-spacing: 1rem;
-    color: whitesmoke;
 }
